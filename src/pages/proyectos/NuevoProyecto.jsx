@@ -64,8 +64,8 @@ const NuevoProyecto = () => {
           <i className="fas fa-arrow-left" />
         </Link>
       </div>
-      <h1 className="text-2xl font-bold text-gray-900">Crear Nuevo Proyecto</h1>
-      <form ref={form} onChange={updateFormData} onSubmit={submitForm}>
+      <h1 className="text-2xl font-bold text-white">Crear Nuevo Proyecto</h1>
+      <form ref={form} onChange={updateFormData} onSubmit={submitForm} className="text-gray-500">
         <Input
           name="nombre"
           label="Nombre del Proyecto"
@@ -127,7 +127,7 @@ const Objetivos = () => {
   return (
     <ObjContext.Provider value={{ eliminarObjetivo }}>
       <div>
-        <span>Objetivos del Proyecto</span>
+        <span className="text-white">Objetivos del Proyecto</span>
         {!maxObjetivos && (
           <i
             onClick={() =>
@@ -150,7 +150,7 @@ const Objetivos = () => {
 const FormObjetivo = ({ id }) => {
   const { eliminarObjetivo } = useObj();
   return (
-    <div className="flex items-center">
+    <div className="flex items-center text-gray-500">
       <Input
         name={`nested||objetivos||${id}||descripcion`}
         label="Descripción"

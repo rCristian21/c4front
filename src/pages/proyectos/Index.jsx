@@ -37,13 +37,13 @@ const IndexProyectos = () => {
     return (
       <div className="p-10 flex flex-col">
         <div className="flex w-full items-center justify-center">
-          <h1 className="text-2xl font-bold text-gray-900">
+          <h1 className="text-2xl font-bold text-white">
             Lista de Proyectos
           </h1>
         </div>
         <PrivateComponent roleList={["ADMINISTRADOR", "LIDER"]}>
           <div className="my-2 self-end">
-            <button className="bg-indigo-500 text-gray-50 p-2 rounded-lg shadow-lg hover:bg-indigo-400">
+            <button className="bg-red-500 text-gray-50 p-2 rounded-lg shadow-lg hover:bg-red-400">
               <Link to="/proyectos/nuevo">Crear nuevo proyecto</Link>
             </button>
           </div>
@@ -66,8 +66,8 @@ const AccordionProyecto = ({ proyecto }) => {
         <AccordionSummaryStyled
           expandIcon={<i className="fas fa-chevron-down" />}
         >
-          <div className="flex w-full justify-between">
-            <div className="uppercase font-bold text-gray-100 ">
+          <div className="flex w-full justify-between ">
+            <div className="uppercase font-bold text-black-100 ">
               {proyecto.nombre} - {proyecto.estado}
             </div>
           </div>
@@ -142,13 +142,13 @@ const FormEditProyecto = ({ _id }) => {
   }, [dataMutation]);
 
   return (
-    <div className="p-4">
+    <div className="p-4 bg-gray-400">
       <h1 className="font-bold">Modificar Estado del Proyecto</h1>
       <form
         ref={form}
         onChange={updateFormData}
         onSubmit={submitForm}
-        className="flex flex-col items-center"
+        className="flex flex-col items-center "
       >
         <DropDown
           label="Estado del Proyecto"
@@ -190,7 +190,7 @@ const Objetivo = ({ index, _id, idProyecto, tipo, descripcion }) => {
       />
     );
   return (
-    <div className="mx-5 my-4 bg-gray-50 p-8 rounded-lg flex flex-col items-center justify-center shadow-xl">
+    <div className="mx-5 my-4 bg-gray-400 p-8 rounded-lg flex flex-col items-center justify-center shadow-xl">
       <div className="text-lg font-bold">{tipo}</div>
       <div>{descripcion}</div>
       <PrivateComponent roleList={["ADMINISTRADOR", "LIDER"]}>
@@ -263,8 +263,8 @@ const EditarObjetivo = ({
     });
   };
   return (
-    <div className="p-4">
-      <h1 className="text-2xl font-bold text-gray-900">Editar Objetivo</h1>
+    <div className="p-4 bg-gray-400">
+      <h1 className="text-2xl font-bold text-white ">Editar Objetivo</h1>
       <form ref={form} onChange={updateFormData} onSubmit={submitForm}>
         <DropDown
           label="Tipo de Objetivo"

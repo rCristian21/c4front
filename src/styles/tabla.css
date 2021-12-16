@@ -2,12 +2,13 @@
   width: 100%;
   margin: 10px;
   overflow-y: scroll;
+  background: gray;
 }
 
 .tabla td,
 .tabla th {
   padding: 8px;
-  border: 1px solid #ddd;
+  border: 1px solid gray;
 }
 
 .tabla th {

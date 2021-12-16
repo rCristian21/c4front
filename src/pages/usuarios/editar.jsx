@@ -56,16 +56,16 @@ const EditarUsuario = () => {
   return (
     <div className="flew flex-col w-full h-full items-center justify-center p-10">
       <Link to="/usuarios">
-        <i className="fas fa-arrow-left text-gray-600 cursor-pointer font-bold text-xl hover:text-gray-900" />
+        <i className="fas fa-arrow-left text-white cursor-pointer font-bold text-xl hover:text-gray-900" />
       </Link>
-      <h1 className="m-4 text-3xl text-gray-800 font-bold text-center">
+      <h1 className="m-4 text-3xl text-white font-bold text-center">
         Editar Usuario
       </h1>
       <form
         onSubmit={submitForm}
         onChange={updateFormData}
         ref={form}
-        className="flex flex-col items-center justify-center"
+        className="flex flex-col items-center justify-center text-gray-500"
       >
         <Input
           label="Nombre de la persona:"
